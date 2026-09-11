@@ -1,0 +1,793 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anaedo — Business &amp; Opportunities, Nnewi</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap');
+  :root{
+    --ink:#0B0B0B;
+    --ink-soft:#151310;
+    --gold:#C9A227;
+    --gold-bright:#D4AF37;
+    --cream:#F6F1E7;
+    --cream-dim:#EDE5D3;
+    --charcoal:#1C1917;
+    --brown:#7A6435;
+    --rule: rgba(201,162,39,0.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:'Public Sans', sans-serif;
+    line-height:1.5;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+  /* ---------- Header ---------- */
+  header.site{
+    background:var(--ink);
+    padding:18px 0;
+    position:sticky;
+    top:0;
+    z-index:20;
+    border-bottom:1px solid rgba(201,162,39,0.25);
+  }
+  header.site .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand svg{width:40px;height:40px;flex-shrink:0;}
+  .brand .word{color:var(--cream);}
+  .brand .word b{font-family:'Fraunces',serif;font-weight:600;font-size:20px;display:block;line-height:1;}
+  .brand .word span{color:var(--gold);font-size:11px;letter-spacing:0.02em;}
+  .nav-cta{
+    background:var(--gold);
+    color:var(--ink);
+    font-weight:700;
+    font-size:14px;
+    padding:10px 18px;
+    border-radius:3px;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--ink);
+    color:var(--cream);
+    padding:64px 0 72px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .hero-motif{
+    position:absolute;
+    right:-60px;
+    top:-40px;
+    width:340px;
+    opacity:0.08;
+    z-index:1;
+  }
+  .eyebrow-plain{
+    color:var(--gold-bright);
+    font-size:14px;
+    margin:0 0 14px;
+    font-weight:600;
+  }
+  .hero h1{
+    font-size:clamp(34px, 6vw, 56px);
+    line-height:1.05;
+    max-width:11ch;
+    color:var(--cream);
+  }
+  .hero p.lede{
+    max-width:46ch;
+    font-size:18px;
+    color:#D9D2C2;
+    margin-top:20px;
+  }
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    margin-top:32px;
+    flex-wrap:wrap;
+  }
+  .btn-primary{
+    background:var(--gold);
+    color:var(--ink);
+    font-weight:700;
+    padding:14px 26px;
+    border-radius:3px;
+    text-decoration:none;
+    font-size:15px;
+  }
+  .btn-ghost{
+    border:1px solid var(--rule);
+    color:var(--cream);
+    padding:14px 26px;
+    border-radius:3px;
+    text-decoration:none;
+    font-size:15px;
+  }
+  .stat-strip{
+    margin-top:56px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--rule);
+    padding-top:24px;
+    max-width:560px;
+  }
+  .stat-strip div b{
+    font-family:'Fraunces',serif;
+    font-size:28px;
+    font-weight:600;
+    color:var(--gold-bright);
+    display:block;
+  }
+  .stat-strip div span{
+    font-size:13px;
+    color:#B9AF98;
+  }
+  /* ---------- Intro ---------- */
+  .intro{
+    padding:56px 0 8px;
+  }
+  .intro .wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:end;
+  }
+  .intro h2{
+    font-size:28px;
+    max-width:14ch;
+  }
+  .intro p{
+    color:var(--brown);
+    font-size:16px;
+    max-width:44ch;
+  }
+  /* ---------- Directory (ledger rows) ---------- */
+  .directory{padding:40px 0 80px;}
+  .ledger-head{
+    display:grid;
+    grid-template-columns:64px 1fr 200px;
+    padding:0 22px 12px;
+    border-bottom:1px solid var(--rule);
+    font-size:12px;
+    color:var(--brown);
+    font-weight:600;
+  }
+  .ledger{
+    border-top:none;
+  }
+  .row{
+    display:grid;
+    grid-template-columns:64px 1fr 200px;
+    align-items:center;
+    padding:22px;
+    border-bottom:1px solid var(--rule);
+    gap:16px;
+    transition:background 0.15s ease;
+  }
+  .row:hover{background:var(--cream-dim);}
+  .row .num{
+    font-family:'Fraunces',serif;
+    font-size:15px;
+    color:var(--gold);
+    font-weight:600;
+  }
+  .row .info h3{
+    font-size:19px;
+    margin-bottom:4px;
+  }
+  .row .info p{
+    margin:0;
+    font-size:14px;
+    color:var(--brown);
+    max-width:52ch;
+  }
+  .row .action{
+    justify-self:end;
+  }
+  .chat-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--ink);
+    color:var(--cream);
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    padding:10px 16px;
+    border-radius:3px;
+    white-space:nowrap;
+  }
+  .chat-btn:hover{background:var(--gold);color:var(--ink);}
+  .chat-btn svg{width:14px;height:14px;fill:currentColor;}
+  @media (max-width:680px){
+    .ledger-head{display:none;}
+    .row{grid-template-columns:1fr;}
+    .row .num{margin-bottom:4px;}
+    .row .action{justify-self:start;margin-top:6px;}
+    .intro .wrap{grid-template-columns:1fr;gap:20px;}
+  }
+  /* ---------- Wanted list ---------- */
+  .wanted{
+    background:var(--ink);
+    color:var(--cream);
+    padding:56px 0;
+  }
+  .wanted .wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+  .wanted h2{color:var(--cream);font-size:26px;max-width:13ch;}
+  .wanted p.sub{color:#B9AF98;font-size:15px;margin-top:10px;max-width:40ch;}
+  .want-list{list-style:none;margin:20px 0 0;padding:0;}
+  .want-list li{
+    padding:14px 0;
+    border-bottom:1px solid var(--rule);
+    font-size:15px;
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .want-list li span.who{color:#9C927A;font-size:13px;}
+  /* ---------- Footer ---------- */
+  footer{
+    padding:44px 0;
+    text-align:center;
+  }
+  footer .brand{justify-content:center;margin-bottom:18px;}
+  footer p{color:var(--brown);font-size:13px;}
+  /* ---------- List item form ---------- */
+  .list-item{padding:64px 0 72px;}
+  .list-item .panel{
+    background:var(--ink);
+    color:var(--cream);
+    border-radius:4px;
+    padding:40px;
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:40px;
+  }
+  .list-item h2{color:var(--cream);font-size:26px;max-width:14ch;}
+  .list-item .panel p.sub{color:#B9AF98;font-size:15px;margin-top:12px;max-width:36ch;}
+  .list-item form{display:grid;gap:14px;}
+  .field label{
+    display:block;
+    font-size:12px;
+    color:var(--gold-bright);
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  .field input, .field select, .field textarea{
+    width:100%;
+    background:var(--ink-soft);
+    border:1px solid var(--rule);
+    color:var(--cream);
+    padding:11px 12px;
+    border-radius:3px;
+    font-family:'Public Sans', sans-serif;
+    font-size:14px;
+  }
+  .field textarea{resize:vertical;min-height:64px;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .submit-btn{
+    background:var(--gold);
+    color:var(--ink);
+    border:none;
+    font-weight:700;
+    font-size:15px;
+    padding:14px 26px;
+    border-radius:3px;
+    cursor:pointer;
+    justify-self:start;
+    margin-top:6px;
+  }
+  .submit-btn:hover{background:var(--gold-bright);}
+  .form-msg{
+    font-size:13px;
+    color:var(--gold-bright);
+    display:none;
+  }
+  @media (max-width:760px){
+    .list-item .panel{grid-template-columns:1fr;padding:28px;}
+    .field-row{grid-template-columns:1fr;}
+  }
+  /* ---------- New / pending badges ---------- */
+  .badge{
+    display:inline-block;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:0.02em;
+    padding:3px 8px;
+    border-radius:2px;
+    margin-left:8px;
+    vertical-align:middle;
+  }
+  .badge.new{background:var(--gold);color:var(--ink);}
+  .badge.pending{background:transparent;border:1px solid var(--brown);color:var(--brown);}
+  /* ---------- Admin panel ---------- */
+  #adminPanel{
+    display:none;
+    padding:40px 0 80px;
+    background:var(--cream-dim);
+  }
+  #adminPanel .wrap{max-width:900px;}
+  #adminPanel h2{font-size:22px;margin-bottom:6px;}
+  #adminPanel p.sub{color:var(--brown);font-size:14px;margin-bottom:24px;}
+  .pend-card{
+    background:#fff;
+    border:1px solid var(--rule);
+    border-radius:4px;
+    padding:18px 20px;
+    margin-bottom:14px;
+  }
+  .pend-card h4{margin:0 0 4px;font-size:16px;font-family:'Fraunces',serif;}
+  .pend-card p{margin:2px 0;font-size:14px;color:var(--brown);}
+  .pend-actions{margin-top:12px;display:flex;gap:10px;}
+  .pend-actions button{
+    border:none;
+    padding:8px 16px;
+    border-radius:3px;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+  }
+  .approve-btn{background:var(--ink);color:var(--cream);}
+  .approve-btn:hover{background:var(--gold);color:var(--ink);}
+  .reject-btn{background:transparent;border:1px solid var(--brown) !important;color:var(--brown);}
+  .empty-note{color:var(--brown);font-size:14px;}</style>
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="58" y="38" width="44" height="44" rx="3" fill="none" stroke="#C9A227" stroke-width="5" transform="rotate(45 80 60)"></rect>
+        <rect x="71" y="51" width="18" height="18" fill="#C9A227" transform="rotate(45 80 60)"></rect>
+        <line x1="62" y1="96" x2="62" y2="128" stroke="#C9A227" stroke-width="8" stroke-linecap="round"></line>
+        <line x1="74" y1="96" x2="74" y2="128" stroke="#C9A227" stroke-width="8" stroke-linecap="round"></line>
+        <line x1="86" y1="96" x2="86" y2="128" stroke="#C9A227" stroke-width="8" stroke-linecap="round"></line>
+        <line x1="98" y1="96" x2="98" y2="128" stroke="#C9A227" stroke-width="8" stroke-linecap="round"></line>
+      </svg>
+      <div class="word">
+        <b>Anaedo</b>
+        <span>Business &amp; Opportunities</span>
+      </div>
+    </div>
+    <a class="nav-cta" href="#directory">Join the community</a>
+  </div>
+</header>
+<section class="hero">
+  <svg class="hero-motif" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+    <rect x="58" y="38" width="44" height="44" rx="3" fill="none" stroke="#F6F1E7" stroke-width="5" transform="rotate(45 80 60)"></rect>
+    <rect x="71" y="51" width="18" height="18" fill="#F6F1E7" transform="rotate(45 80 60)"></rect>
+    <line x1="62" y1="96" x2="62" y2="128" stroke="#F6F1E7" stroke-width="8" stroke-linecap="round"></line>
+    <line x1="74" y1="96" x2="74" y2="128" stroke="#F6F1E7" stroke-width="8" stroke-linecap="round"></line>
+    <line x1="86" y1="96" x2="86" y2="128" stroke="#F6F1E7" stroke-width="8" stroke-linecap="round"></line>
+    <line x1="98" y1="96" x2="98" y2="128" stroke="#F6F1E7" stroke-width="8" stroke-linecap="round"></line>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow-plain">Nnewi, Anambra</p>
+    <h1>Everything for sale in Nnewi, in one directory.</h1>
+    <p class="lede">Anaedo is a WhatsApp-first marketplace — fashion, property, electronics, automobiles, food and work, organised into one community. Browse here, then move straight into the group to close the deal.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#directory">Browse categories</a>
+      <a class="btn-ghost" href="https://chat.whatsapp.com/KZ2Jga5ax5x5DwGYjJtDe8" target="_blank" rel="noopener">Join Announcements</a>
+    </div>
+    <div class="stat-strip">
+      <div>
+        <b>1,000+</b>
+        <span>Members in the community</span>
+      </div>
+      <div>
+        <b>8</b>
+        <span>Active category groups</span>
+      </div>
+      <div>
+        <b>Nnewi</b>
+        <span>Home market</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="intro">
+  <div class="wrap">
+    <h2>One community, eight markets.</h2>
+    <p>Each category below is a live WhatsApp group. Listings here are pulled from what people are already posting — tap through to chat with a seller directly, no middleman, no app to download.</p>
+  </div>
+</section>
+<section class="directory" id="directory">
+  <div class="wrap">
+    <div class="ledger-head">
+      <span>No.</span>
+      <span>Category</span>
+      <span>Group</span>
+    </div>
+    <div class="ledger" id="ledgerList">
+      <div class="row" data-static="true">
+        <span class="num">01</span>
+        <div class="info">
+          <h3>Anaedo Marketplace</h3>
+          <p>The general market — anything bought or sold across Nnewi, all in one thread.</p>
+        </div>
+        <div class="action">
+          <a class="chat-btn" href="https://chat.whatsapp.com/C98xzSNTEcTEGeTnZAAR9D?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24">
+              <path d="M17.6 6.3A8.8 8.8 0 0 0 3.6 16.4L2 22l5.8-1.5a8.8 8.8 0 0 0 12.6-7.9c0-2.3-.9-4.6-2.8-6.3zM12 20.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.3 7.3 0 1 1 12 20.2z"></path>
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <span class="num">02</span>
+        <div class="info">
+          <h3>Fashion Market</h3>
+          <p>Clothing, shoes, fabrics and accessories from Nnewi's fashion sellers.</p>
+        </div>
+        <div class="action">
+          <a class="chat-btn" href="https://chat.whatsapp.com/GiC7f3gJDPcLQlWYf7j8Hm?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24">
+              <path d="M17.6 6.3A8.8 8.8 0 0 0 3.6 16.4L2 22l5.8-1.5a8.8 8.8 0 0 0 12.6-7.9c0-2.3-.9-4.6-2.8-6.3zM12 20.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.3 7.3 0 1 1 12 20.2z"></path>
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <span class="num">03</span>
+        <div class="info">
+          <h3>Property &amp; Real Estate</h3>
+          <p>Land, rentals and property listings, direct from agents and owners.</p>
+        </div>
+        <div class="action">
+          <a class="chat-btn" href="https://chat.whatsapp.com/FV0JUzwel3212C6imzkGCd?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24">
+              <path d="M17.6 6.3A8.8 8.8 0 0 0 3.6 16.4L2 22l5.8-1.5a8.8 8.8 0 0 0 12.6-7.9c0-2.3-.9-4.6-2.8-6.3zM12 20.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.3 7.3 0 1 1 12 20.2z"></path>
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <span class="num">04</span>
+        <div class="info">
+          <h3>Anaedo WorkLink</h3>
+          <p>Jobs, gigs and opportunities — for people hiring and people looking.</p>
+        </div>
+        <div class="action">
+          <a class="chat-btn" href="https://chat.whatsapp.com/JhhanG5xoXS6mPWyBnUhEj?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24">
+              <path d="M17.6 6.3A8.8 8.8 0 0 0 3.6 16.4L2 22l5.8-1.5a8.8 8.8 0 0 0 12.6-7.9c0-2.3-.9-4.6-2.8-6.3zM12 20.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.3 7.3 0 1 1 12 20.2z"></path>
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <span class="num">05</span>
+        <div class="info">
+          <h3>Electronics Market</h3>
+          <p>Phones, gadgets and appliances — new and fairly-used.</p>
+        </div>
+        <div class="action">
+          <a class="chat-btn" href="https://chat.whatsapp.com/DTjO7hNMKFC6im8BGZ62DH?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24">
+              <path d="M17.6 6.3A8.8 8.8 0 0 0 3.6 16.4L2 22l5.8-1.5a8.8 8.8 0 0 0 12.6-7.9c0-2.3-.9-4.6-2.8-6.3zM12 20.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.3 7.3 0 1 1 12 20.2z"></path>
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <span class="num">06</span>
+        <div class="info">
+          <h3>Automobile Market</h3>
+          <p>Cars, parts and auto services from dealers and private sellers.</p>
+        </div>
+        <div class="action">
+          <a class="chat-btn" href="https://chat.whatsapp.com/GFb1qOqm8orAS54d0wdaiE?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24">
+              <path d="M17.6 6.3A8.8 8.8 0 0 0 3.6 16.4L2 22l5.8-1.5a8.8 8.8 0 0 0 12.6-7.9c0-2.3-.9-4.6-2.8-6.3zM12 20.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.3 7.3 0 1 1 12 20.2z"></path>
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <span class="num">07</span>
+        <div class="info">
+          <h3>Food Market</h3>
+          <p>Home cooks, food vendors and produce sellers across Nnewi.</p>
+        </div>
+        <div class="action">
+          <a class="chat-btn" href="https://chat.whatsapp.com/Iz3F4IGho6qHtZlRl4a5Tl?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24">
+              <path d="M17.6 6.3A8.8 8.8 0 0 0 3.6 16.4L2 22l5.8-1.5a8.8 8.8 0 0 0 12.6-7.9c0-2.3-.9-4.6-2.8-6.3zM12 20.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.3 7.3 0 1 1 12 20.2z"></path>
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <span class="num">08</span>
+        <div class="info">
+          <h3>Announcements</h3>
+          <p>Community updates, new-member welcomes and Anaedo news — read-only.</p>
+        </div>
+        <div class="action">
+          <a class="chat-btn" href="https://chat.whatsapp.com/KZ2Jga5ax5x5DwGYjJtDe8" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24">
+              <path d="M17.6 6.3A8.8 8.8 0 0 0 3.6 16.4L2 22l5.8-1.5a8.8 8.8 0 0 0 12.6-7.9c0-2.3-.9-4.6-2.8-6.3zM12 20.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.3 7.3 0 1 1 12 20.2z"></path>
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="wanted">
+  <div class="wrap">
+    <div>
+      <h2>People are already asking.</h2>
+      <p class="sub">Real requests from inside the community this week — proof there's demand waiting for the right seller.</p>
+    </div>
+    <ul class="want-list">
+      <li>Who sells ecolac school bags in bulk? 
+        <span class="who">Marketplace</span>
+      </li>
+      <li>Looking for a 2-bedroom flat near Uruagu 
+        <span class="who">Property</span>
+      </li>
+      <li>Anyone doing generator repairs this weekend? 
+        <span class="who">Electronics</span>
+      </li>
+      <li>Need a tailor who does native wear fast 
+        <span class="who">Fashion</span>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="list-item" id="list-item">
+  <div class="wrap">
+    <div class="panel">
+      <div>
+        <h2>List something for sale.</h2>
+        <p class="sub">Fill this in and your item goes to Anaedo for review. Once approved, it appears in the directory above with a link straight to your WhatsApp.</p>
+      </div>
+      <form id="listingForm">
+        <div class="field">
+          <label for="sellerName">Your name</label>
+          <input type="text" id="sellerName" required="" placeholder="e.g. Chidinma Okafor">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="itemCategory">Category</label>
+            <select id="itemCategory" required="">
+              <option value="">Choose one</option>
+              <option>Marketplace</option>
+              <option>Fashion Market</option>
+              <option>Property &amp; Real Estate</option>
+              <option>Anaedo WorkLink</option>
+              <option>Electronics Market</option>
+              <option>Automobile Market</option>
+              <option>Food Market</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="itemPrice">Price (optional)</label>
+            <input type="text" id="itemPrice" placeholder="e.g. ₦15,000">
+          </div>
+        </div>
+        <div class="field">
+          <label for="itemTitle">Item title</label>
+          <input type="text" id="itemTitle" required="" placeholder="e.g. Fairly-used generator, 2.5kva">
+        </div>
+        <div class="field">
+          <label for="itemDesc">Short description</label>
+          <textarea id="itemDesc" required="" placeholder="Condition, size, what's included..."></textarea>
+        </div>
+        <div class="field">
+          <label for="itemWhatsapp">Your WhatsApp number</label>
+          <input type="text" id="itemWhatsapp" required="" placeholder="e.g. 08031234567">
+        </div>
+        <button type="submit" class="submit-btn">Submit for review</button>
+        <p class="form-msg" id="formMsg">Submitted — it'll show up once approved.</p>
+      </form>
+    </div>
+  </div>
+</section>
+<section id="adminPanel">
+  <div class="wrap">
+    <h2>Pending listings</h2>
+    <p class="sub">Only visible with 
+      <code>?admin=1</code> in the link. Approve to publish into the directory, reject to discard.
+    </p>
+    <div id="pendingList"></div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="width:32px;height:32px;">
+        <rect x="58" y="38" width="44" height="44" rx="3" fill="none" stroke="#C9A227" stroke-width="5" transform="rotate(45 80 60)"></rect>
+        <rect x="71" y="51" width="18" height="18" fill="#C9A227" transform="rotate(45 80 60)"></rect>
+        <line x1="62" y1="96" x2="62" y2="128" stroke="#C9A227" stroke-width="8" stroke-linecap="round"></line>
+        <line x1="74" y1="96" x2="74" y2="128" stroke="#C9A227" stroke-width="8" stroke-linecap="round"></line>
+        <line x1="86" y1="96" x2="86" y2="128" stroke="#C9A227" stroke-width="8" stroke-linecap="round"></line>
+        <line x1="98" y1="96" x2="98" y2="128" stroke="#C9A227" stroke-width="8" stroke-linecap="round"></line>
+      </svg>
+      <div class="word" style="color:#1C1917;">
+        <b style="color:#1C1917;">Anaedo</b>
+        <span style="color:#7A6435;">Business &amp; Opportunities</span>
+      </div>
+    </div>
+    <p>Nnewi, Anambra State — built on WhatsApp.</p>
+  </div>
+</footer>
+<script>(function(){
+  // Paste the Web app URL from your Apps Script deployment here
+  // (Extensions > Apps Script > Deploy > New deployment > Web app).
+  // It ends in /exec.
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7DLxLkAxC_kmbpuqgyWEofVMEB9ljPDVYmxl48gikuYEH3t1eDSsqyIDKj9W5PrBx7w/exec';
+  var whatsappIcon = '<svg viewBox="0 0 24 24"><path d="M17.6 6.3A8.8 8.8 0 0 0 3.6 16.4L2 22l5.8-1.5a8.8 8.8 0 0 0 12.6-7.9c0-2.3-.9-4.6-2.8-6.3zM12 20.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.3 7.3 0 1 1 12 20.2z"/></svg>';
+  function cleanNumber(raw){
+    return raw.replace(/[^0-9]/g, '');
+  }
+  function escapeHtml(str){
+    var div = document.createElement('div');
+    div.textContent = str || '';
+    return div.innerHTML;
+  }
+  function isConfigured(){
+    return SCRIPT_URL && SCRIPT_URL.indexOf('PASTE_YOUR') === -1;
+  }
+  function fetchList(status){
+    if(!isConfigured()) return Promise.resolve([]);
+    var url = SCRIPT_URL + '?action=list' + (status ? '&status=' + status : '');
+    return fetch(url).then(function(r){ return r.json(); })
+      .then(function(data){ return data.ok ? data.items : []; })
+      .catch(function(){ return []; });
+  }
+  function postAction(payload){
+    if(!isConfigured()) return Promise.resolve({ok:false});
+    return fetch(SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' }, // avoids CORS preflight on Apps Script
+      body: JSON.stringify(payload)
+    }).then(function(r){ return r.json(); }).catch(function(){ return {ok:false}; });
+  }
+  // ---- Form submission ----
+  var form = document.getElementById('listingForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('.submit-btn');
+    var msg = document.getElementById('formMsg');
+    if(!isConfigured()){
+      msg.textContent = 'The site owner hasn\'t connected the backend yet — try again soon.';
+      msg.style.display = 'block';
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+    var entry = {
+      action: 'submit',
+      id: 'l_' + Date.now(),
+      seller: document.getElementById('sellerName').value.trim(),
+      category: document.getElementById('itemCategory').value,
+      price: document.getElementById('itemPrice').value.trim(),
+      title: document.getElementById('itemTitle').value.trim(),
+      desc: document.getElementById('itemDesc').value.trim(),
+      whatsapp: cleanNumber(document.getElementById('itemWhatsapp').value)
+    };
+    postAction(entry).then(function(res){
+      btn.disabled = false;
+      btn.textContent = 'Submit for review';
+      if(res.ok){
+        form.reset();
+        msg.textContent = "Submitted — it'll show up once approved.";
+      } else {
+        msg.textContent = 'Something went wrong — please try again.';
+      }
+      msg.style.display = 'block';
+      setTimeout(function(){ msg.style.display = 'none'; }, 5000);
+    });
+  });
+  // ---- Render approved listings into the public ledger ----
+  function renderLedger(){
+    fetchList('approved').then(function(list){
+      var container = document.getElementById('ledgerList');
+      var existing = container.querySelectorAll('[data-dynamic="true"]');
+      existing.forEach(function(el){ el.remove(); });
+      var staticCount = container.querySelectorAll('[data-static="true"]').length;
+      list.forEach(function(l, i){
+        var row = document.createElement('div');
+        row.className = 'row';
+        row.setAttribute('data-dynamic', 'true');
+        var num = String(staticCount + i + 1).padStart(2, '0');
+        row.innerHTML =
+          '<span class="num">' + num + '</span>' +
+          '<div class="info"><h3>' + escapeHtml(l.title) + '<span class="badge new">New</span></h3>' +
+          '<p>' + escapeHtml(l.desc) + (l.price ? ' &mdash; ' + escapeHtml(l.price) : '') + '</p></div>' +
+          '<div class="action"><a class="chat-btn" href="https://wa.me/' + l.whatsapp + '" target="_blank" rel="noopener">' + whatsappIcon + ' Chat on WhatsApp</a></div>';
+        container.appendChild(row);
+      });
+    });
+  }
+  // ---- Admin panel ----
+  function isAdmin(){
+    return new URLSearchParams(window.location.search).get('admin') === '1';
+  }
+  function getAdminKey(){
+    var stored = sessionStorage.getItem('anaedoAdminKey');
+    if(stored) return stored;
+    var entered = prompt('Enter your admin key:');
+    if(entered) sessionStorage.setItem('anaedoAdminKey', entered);
+    return entered;
+  }
+  function renderAdmin(){
+    if(!isAdmin()) return;
+    document.getElementById('adminPanel').style.display = 'block';
+    var el = document.getElementById('pendingList');
+    if(!isConfigured()){
+      el.innerHTML = '<p class="empty-note">Backend not connected yet — paste your Apps Script URL into the site code first.</p>';
+      return;
+    }
+    fetchList('pending').then(function(pending){
+      if(pending.length === 0){
+        el.innerHTML = '<p class="empty-note">Nothing waiting for review right now.</p>';
+        return;
+      }
+      el.innerHTML = pending.map(function(l){
+        return '<div class="pend-card">' +
+          '<h4>' + escapeHtml(l.title) + ' <span class="badge pending">' + escapeHtml(l.category || 'Uncategorised') + '</span></h4>' +
+          '<p>' + escapeHtml(l.desc) + (l.price ? ' &mdash; ' + escapeHtml(l.price) : '') + '</p>' +
+          '<p>Seller: ' + escapeHtml(l.seller) + ' &middot; ' + escapeHtml(l.whatsapp) + '</p>' +
+          '<div class="pend-actions">' +
+            '<button class="approve-btn" data-approve="' + l.id + '">Approve</button>' +
+            '<button class="reject-btn" data-reject="' + l.id + '">Reject</button>' +
+          '</div></div>';
+      }).join('');
+      el.querySelectorAll('[data-approve]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var key = getAdminKey();
+          if(!key) return;
+          postAction({ action: 'approve', id: btn.getAttribute('data-approve'), adminKey: key })
+            .then(function(res){
+              if(!res.ok) { sessionStorage.removeItem('anaedoAdminKey'); alert('Wrong key, or something went wrong.'); }
+              renderAll();
+            });
+        });
+      });
+      el.querySelectorAll('[data-reject]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var key = getAdminKey();
+          if(!key) return;
+          postAction({ action: 'reject', id: btn.getAttribute('data-reject'), adminKey: key })
+            .then(function(res){
+              if(!res.ok) { sessionStorage.removeItem('anaedoAdminKey'); alert('Wrong key, or something went wrong.'); }
+              renderAll();
+            });
+        });
+      });
+    });
+  }
+  function renderAll(){
+    renderLedger();
+    renderAdmin();
+  }
+  renderAll();
+})();</script>
